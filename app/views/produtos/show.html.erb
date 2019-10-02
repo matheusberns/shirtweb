@@ -1,0 +1,21 @@
+<div class="flex flex-wrap shadow-boxing-show mrg-top-50">
+
+  <div class="layout-show-image">
+    <div class="display-middle">
+      <% if @produto.produto_imagem %>
+        <%= image_tag @produto.produto_imagem, id: "display-middle", class: "card-img-top", size: "463x463" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="layout-show-name">
+    <strong><h3 class="mrg-35"><%= @produto.nome %></h3></strong>
+    <h1 class="mrg-35"><%= number_to_currency(@produto.preco, class: "card-text", unit: "R$", separator: ",") %></h1>
+    <h4 class="mrg-35 mrg-top-50">Quantidade: <%= @produto.quantidade%></h4>
+
+    <div class="btn-buy-show">
+      <%= button_to "Comprar", show_produto_path(@produto),
+                       class: "btn btn-primary text-center btn-buy-show",
+                       method: :get %>
+    </div>
+  </div>
+</div>

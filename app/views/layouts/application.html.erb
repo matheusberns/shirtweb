@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--  <title>Shirtweb</title>-->
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+</head>
+<body>
+<% if notice %>
+  <p id="notice" class="alert alert-success"><%= notice %></p>
+  <script>
+      hideAlert();
+  </script>
+<% end %>
+<% if alert %>
+  <p id="alert" class="alert alert-danger"><%= alert %></p>
+  <script>
+      hideAlert();
+  </script>
+<% end %>
+<div class="tst">
+  <div class="user container c-white">
+    <strong class="c-white"><%= user_signed_in? ? current_user.email.split('@')[0] : nil %></strong> |
+    <%= link_to "Conta", edit_user_registration_path, class: "stretched-link" %>
+    <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "stretched-link" %>
+  </div>
+  <%= nav_bar responsive: true, brand_link: root_url do %>
+    <%= form_tag ("/?nome=#{:nome}"), method: :get, class: "navbar-form w100p" do %>
+      <% if user_signed_in? %>
+        <%= menu_group do %>
+          <%= menu_item "Início", root_path %>
+          <% if current_user.role == "admin" %>
+            <%= menu_item "Novo produto", new_produto_path %>
+          <% end %>
+          <%= menu_item "Cães", ("/?department_id=#{2}") %>
+          <%= menu_item "Gatos", ("/?department_id=#{1}") %>
+          <%= menu_item "Sobre nós" %>
+          <%= menu_item "Contato" %>
+        <% end %>
+        <div class="text-right">
+          <%= menu_group do %>
+            <div class="search">
+              <%= text_field_tag :nome, nil, placeholder: "Buscar produto", class: "form-control" %>
+              <%= button_to "Buscar", nil, class: "btn btn-default" %>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+<div class="container">
+  <%= yield %>
+</div>
+</body>
+</html>

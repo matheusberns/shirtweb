@@ -1,0 +1,8 @@
+<% if @produto %>
+  <% @produto.errors.full_messages.each do |message| %>
+    <p class="alert alert-danger"><%= message %></p>
+  <% end %>
+<% end %>
+<div class="mrg-top-50">
+<%= render partial: "form" %>
+</div>

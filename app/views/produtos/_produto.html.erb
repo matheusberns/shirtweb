@@ -1,0 +1,30 @@
+<title>Início</title>
+
+<div class="card max-width-card shadow-boxing border-suavity mrg-min mb-3 item text-center pointer">
+  <% if produto.produto_imagem %>
+    <%= image_tag produto.produto_imagem, class: "card-img-top", size: "200x200" %>
+  <% end %>
+  <div class="card-body">
+    <h1><%= simple_format produto.nome, class: "card-title" %></h1>
+    <hr class="my-4">
+    <h2><%= number_to_currency(produto.preco, class: "card-text", unit: "R$", separator: ",") %></h2>
+    <% if current_user.role == "user" %>
+      <%= button_to "Comprar", show_produto_path(produto),
+                    class: "btn btn-primary text-center btn-buy",
+                    method: :get %>
+    <% end %>
+    <% if current_user.role == "admin" %>
+      <div class="flex flex-wrap">
+
+        <%= button_to "Excluir", produto,
+                      method: :delete,
+                      data: {confirm: "Tem certeza que deseja excluir #{produto.nome}"},
+                      class: "btn btn-danger text-center btn-buy" %>
+
+        <%= button_to "Editar", edit_produto_path(produto),
+                      class: "btn btn-success text-center btn-buy",
+                      method: :get %>
+      </div>
+    <% end %>
+  </div>
+</div>
