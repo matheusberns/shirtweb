@@ -12,6 +12,8 @@ gem 'puma'
 gem 'rails-i18n'
 # Devise
 gem 'devise'
+# Spinner TTY-Toolkit - Loader
+gem 'tty-spinner'
 # Redis
 gem 'redis'
 # add jquery
