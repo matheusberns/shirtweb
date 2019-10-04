@@ -4,6 +4,7 @@
   <!--  <title>Shirtweb</title>-->
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
+  <%= action_cable_meta_tag %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
 </head>
@@ -38,6 +39,7 @@
           <%= menu_item "Gatos", ("/?department_id=#{1}") %>
           <%= menu_item "Sobre nós" %>
           <%= menu_item "Contato" %>
+          <%= menu_item "Chat global", "chats/show" %>
         <% end %>
         <div class="text-right">
           <%= menu_group do %>

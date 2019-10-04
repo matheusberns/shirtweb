@@ -1,6 +1,6 @@
-//= require rails-ujs
-//= require activestorage
-//= require turbolinks
+//= require jquery
+//= require jquery_ujs
+//= require jquery.turbolinks
 //= require_tree .
 
 function hideAlert() {
@@ -12,6 +12,6 @@ function hideAlert() {
 
 }
 
-function openProdut() {
-    alert('Clicked!');
-}
+
+
+

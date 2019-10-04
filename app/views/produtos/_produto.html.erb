@@ -8,11 +8,9 @@
     <h1><%= simple_format produto.nome, class: "card-title" %></h1>
     <hr class="my-4">
     <h2><%= number_to_currency(produto.preco, class: "card-text", unit: "R$", separator: ",") %></h2>
-    <% if current_user.role == "user" %>
-      <%= button_to "Comprar", show_produto_path(produto),
-                    class: "btn btn-primary text-center btn-buy",
+      <%= button_to "Ver mais", show_produto_path(produto),
+                    class: "btn btn-warning text-center wdt-100",
                     method: :get %>
-    <% end %>
     <% if current_user.role == "admin" %>
       <div class="flex flex-wrap">
 

@@ -1,0 +1,28 @@
+I"ª(function() {
+  App.room = App.cable.subscriptions.create("RoomChannel", {
+    speak: function(message) {
+      var mensagem;
+      this.perform('speak', {
+        message: message
+      });
+      ({
+        received: function(message) {}
+      });
+      $('#messages').append({
+        message: "message"
+      });
+      return mensagem = document.querySelector("messages");
+    }
+  });
+
+  $(document).on('keypress', '[data-behavior~=room_speaker]', function(event) {
+    if (event.keyCode === 13) {
+      App.room.speak(event.target.value);
+      mensagem.append(event.target.value);
+      event.target.value = '';
+      return event.preventDefault();
+    }
+  });
+
+}).call(this);
+:ET

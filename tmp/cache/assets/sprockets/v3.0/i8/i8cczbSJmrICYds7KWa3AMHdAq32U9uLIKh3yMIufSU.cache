@@ -1,0 +1,27 @@
+I"ƒ(function() {
+  App.room = App.cable.subscriptions.create("RoomChannel", {
+    speak: function(message) {
+      this.perform('speak', {
+        message: message
+      });
+      ({
+        received: function(message) {}
+      });
+      return $('#messages').append({
+        message: "message"
+      });
+    }
+  });
+
+  $(document).on('keypress', '[data-behavior~=room_speaker]', function(event) {
+    var show;
+    if (event.keyCode === 13) {
+      App.room.speak(event.target.value);
+      show = document.querySelector("#message");
+      show.textContent = event.target.value;
+      return event.preventDefault();
+    }
+  });
+
+}).call(this);
+:ET

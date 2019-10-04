@@ -1,0 +1,21 @@
+I"-(function() {
+  App.room = App.cable.subscriptions.create("RoomChannel", {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {}
+  }, $('#messages').append(data['message']), {
+    speak: function(message) {}
+  }, this.perform('speak', {
+    message: message
+  }));
+
+  $(document).on('keypress', '[data-behavior~=chat_speaker]', function(event) {
+    if (event.keyCode === 13) {
+      App.chat.speak(event.target.value);
+      event.target.value = "";
+      return event.preventDefault();
+    }
+  });
+
+}).call(this);
+:ET

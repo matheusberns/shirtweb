@@ -1,0 +1,31 @@
+I"!(function() {
+  App.chat = App.cable.subscriptions.create("ChatChannel", {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {
+      return $('#messages').append(data['message']);
+    },
+    speak: function(message) {
+      return this.perform('speak', {
+        message: message
+      });
+    }
+  });
+
+  $(document).on('keypress', '[data-behavior~=chat_speaker]', function(event) {
+    var scroll;
+    if (event.keyCode === 13) {
+      App.chat.speak(event.target.value);
+      event.target.value = "";
+      scroll = function() {
+        var objScrDiv;
+        objScrDiv = document.getElementById('chat-box');
+        return objScrDiv.scrollTop = objScrDiv.scrollHeight;
+      };
+      return;
+    }
+    return event.preventDefault();
+  });
+
+}).call(this);
+:ET

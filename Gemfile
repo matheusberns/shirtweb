@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) {|repo| "https://github.com/#{repo}.git"}
 
 ruby '2.6.4'
- # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -12,6 +12,11 @@ gem 'puma', '~> 3.11'
 gem 'rails-i18n', '~> 5.1'
 # Devise
 gem 'devise'
+# Redis
+gem 'redis', '~> 3.0'
+# add jquery
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
 # Ransack
 gem 'ransack'
 # Use SCSS for stylesheets

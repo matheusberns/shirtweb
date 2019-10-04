@@ -1,0 +1,10 @@
+<h1 class="title">Bate Papo</h1>
+<div id="chat-box" class="container chat-content overflow-auto">
+  <div class="mrg-35 mrg-bot-chat" id="messages">
+    <%= render @messages %>
+  </div>
+
+  <form>
+    <input class="form-control alinhar-bot" type="text" data-behavior="chat_speaker" placeholder=" Digite uma mensagem...">
+  </form>
+</div>

@@ -61,4 +61,6 @@ Rails.application.configure do
 
 
   config.action_mailer.default_url_options = { host: '10.1.1.11', port: 3555 }
+
+  config.action_cable.url = "ws://10.1.1.11:3555/cable"
 end

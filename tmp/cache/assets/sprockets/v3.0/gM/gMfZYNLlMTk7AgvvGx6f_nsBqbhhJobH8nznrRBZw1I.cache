@@ -1,0 +1,15 @@
+I"3(function() {
+  App.room = App.cable.subscriptions.create("RoomChannel", {
+    speak: function(message) {
+      this.perform('speak', {
+        message: message
+      });
+      ({
+        received: function(data) {}
+      });
+      return $('#messages').append(data['message']);
+    }
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,24 @@
+I"&(function() {
+  App.room = App.cable.subscriptions.create("RoomChannel", {
+    speak: function(message) {
+      this.perform('speak', {
+        message: message
+      });
+      ({
+        received: function(data) {}
+      });
+      return $('#messages').append(data['message']);
+    }
+  });
+
+  $(function() {
+    return $('#send_form').submit(function(event) {
+      App.room.speak(event.currentTarget['message'].value);
+      event.currentTarget['message'].value = "";
+      event.preventDefault();
+      return false;
+    });
+  });
+
+}).call(this);
+:ET
