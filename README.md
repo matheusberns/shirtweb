@@ -24,5 +24,4 @@ Things you may want to cover:
 
 * ...
 =======
-# alura-project
 >>>>>>> 4adf22b53fa5a174de04ef8ec9533dc7e96e54f6

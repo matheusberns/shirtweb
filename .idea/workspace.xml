@@ -84,11 +84,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="582">
               <caret line="267" column="21" selection-start-line="267" selection-start-column="21" selection-end-line="267" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shirtweb/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="450">
+                <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -135,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/helpers/produtos_helper.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/produtos/busca.html.erb" />
         <option value="$PROJECT_DIR$/app/views/produtos/show.json.jbuilder" />
@@ -186,6 +207,7 @@
         <option value="$PROJECT_DIR$/app/views/chats/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/messages/_message.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -219,83 +241,6 @@
             <path>
               <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-              <item name="channels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="channels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="jobs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="chats" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="messages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shirtweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shirtweb" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -453,12 +398,12 @@
       <workItem from="1570017214177" duration="18078000" />
       <workItem from="1570098703540" duration="17829000" />
       <workItem from="1570124931211" duration="1553000" />
-      <workItem from="1570190051099" duration="9204000" />
+      <workItem from="1570190051099" duration="9367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162562000" />
+    <option name="totallyTimeSpent" value="162725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1922" height="1019" extended-state="6" />
@@ -504,14 +449,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/alura-project/README.md" />
-    <entry file="file://$PROJECT_DIR$/app/views/produtos/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -806,6 +743,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="582">
           <caret line="267" column="21" selection-start-line="267" selection-start-column="21" selection-end-line="267" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shirtweb/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="450">
+            <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
