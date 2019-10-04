@@ -1,25 +1,22 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
 default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: 10.1.1.11
+  adapter: postgresql
+  encoding: unicode
+  user: postgres
+  pool: 10
   timeout: 5000
-
+  password: p0stgr3s
 development:
   <<: *default
-  database: db/development.sqlite3
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+  database: shirtweb_development
 test:
   <<: *default
-  database: db/test.sqlite3
-
+  database: shirtweb_test
+sandbox:
+  <<: *default
+  host:  localhost
+  database: shirtweb_sandbox
 production:
   <<: *default
-  database: db/production.sqlite3
+  host:  localhost
+  database: shirtweb_production
