@@ -20,11 +20,12 @@
       hideAlert();
   </script>
 <% end %>
-<div class="tst">
+<!--TODO-->
+<div class="tst navbar-fixed-top">
   <div class="user container c-white">
     <strong class="c-white" id="user"><%= user_signed_in? ? current_user.email.split('@')[0] : nil %></strong> |
     <%= link_to "Conta", edit_user_registration_path, class: "stretched-link" %>
-    
+
     <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "stretched-link" %>
   </div>
   <%= nav_bar responsive: true, brand_link: root_url do %>
@@ -39,7 +40,7 @@
           <%= menu_item "Gatos", ("/?department_id=#{1}") %>
           <%= menu_item "Sobre nós" %>
           <%= menu_item "Contato" %>
-          <%= menu_item "Chat global", chats_path + "/index" %>
+          <%= menu_item "Chat global", "#{chats_path}/index" %>
         <% end %>
         <div class="text-right">
           <%= menu_group do %>
@@ -54,7 +55,7 @@
     <% end %>
   <% end %>
 </div>
-<div class="container">
+<div class="container mrg-auto mrg-top-50 mrg-top-155px">
   <%= yield %>
 </div>
 </body>

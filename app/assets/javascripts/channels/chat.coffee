@@ -14,7 +14,6 @@ App.chat = App.cable.subscriptions.create "ChatChannel",
 
   speak: (message) ->
 
-    debugger
     @perform 'speak', message: message, created_by: ''
 
 #$('#messages').append data['message']

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProdutosController < ApplicationController
   before_action :authenticate_user!
 
@@ -13,13 +15,10 @@ class ProdutosController < ApplicationController
     render_edit
   end
 
-
   def show
     set_produto
     set_departments
     render :show
-    time = Benchmark.ms{ Restaurant.all }
-    puts time
   end
 
   def update
@@ -27,10 +26,10 @@ class ProdutosController < ApplicationController
     valores = require_permit_params
     @produto.update valores
     if @produto.save
-      flash[:notice] = "Produto editado com sucesso!"
+      flash[:notice] = 'Produto editado com sucesso!'
       redirect_to root_url
     else
-      @mensagem = ""
+      @mensagem = ''
       render_new
     end
   end
@@ -44,10 +43,10 @@ class ProdutosController < ApplicationController
     valores = require_permit_params
     @produto = Produto.new valores
     if @produto.save
-      flash[:notice] = "Produto salvo com sucesso!"
+      flash[:notice] = 'Produto salvo com sucesso!'
       redirect_to root_url
     else
-      @mensagem = ""
+      @mensagem = ''
       render_new
     end
   end
@@ -55,11 +54,9 @@ class ProdutosController < ApplicationController
   def destroy
     set_produto
     @produto.destroy
-    flash[:notice] = "Produto removido com sucesso!"
+    flash[:notice] = 'Produto removido com sucesso!'
     redirect_to root_url
   end
-
-
 
   private
 
@@ -87,5 +84,4 @@ class ProdutosController < ApplicationController
   def render_edit
     render :edit
   end
-
 end

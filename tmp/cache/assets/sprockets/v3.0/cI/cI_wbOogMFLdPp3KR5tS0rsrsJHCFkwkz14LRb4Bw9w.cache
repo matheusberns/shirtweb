@@ -1,0 +1,32 @@
+I"ú(function() {
+  var user;
+
+  user = document.getElementById("#user");
+
+  App.chat = App.cable.subscriptions.create("ChatChannel", {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {
+      return $('#messages').append(data['message']);
+    },
+    speak: function(message) {
+      return this.perform('speak', {
+        message: message,
+        created_by: ''
+      });
+    }
+  });
+
+  $(document).on('keypress', '[data-behavior~=chat_speaker]', function(event) {
+    if (event.keyCode === 13) {
+      App.chat.speak(event.target.value);
+      event.target.value = "";
+      $('#chat-box').animate({
+        'scrollTop': $(document).height()
+      }, 8);
+      return event.preventDefault();
+    }
+  });
+
+}).call(this);
+:ET

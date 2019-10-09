@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 # Be sure to restart your server when you modify this file. Action Cable runs in a loop that does not support auto reloading.
 class ChatChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "chat_channel"
+    stream_from 'chat_channel'
   end
 
   def unsubscribed
@@ -9,7 +11,6 @@ class ChatChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    debugger
-    Message.create! content: data["message"]
+    Message.create! content: data['message']
   end
 end
