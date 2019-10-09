@@ -9,6 +9,7 @@ class ChatChannel < ApplicationCable::Channel
   end
 
   def speak(data)
+    debugger
     Message.create! content: data["message"]
   end
 end

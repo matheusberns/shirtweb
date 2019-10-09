@@ -4,4 +4,9 @@ module ApplicationHelper
     string.to_s.sub(".", ",")
   end
 
+  def get_user(user)
+    user = user.split('@')[0]
+    @current_user_super = user
+  end
+
 end

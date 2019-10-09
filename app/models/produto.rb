@@ -15,7 +15,6 @@ class Produto < ApplicationRecord
   # Filter Scopped
   scope :by_nome, ->(sentence) {where("nome like ?", "%#{sentence}%")}
   scope :by_department, ->(sentence) {where("department_id = ?", "#{sentence}")}
-  scope :by_asc, ->(sentence) {order("by ?", "#{sentence}")}
 
 
 end

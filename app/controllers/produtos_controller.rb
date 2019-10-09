@@ -2,9 +2,7 @@ class ProdutosController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @produto = Produto.ransack(params[:produto])
-    @produtos = @produto.result(distinct: true)
-
+    @produtos = Produto.all
     params[:nome] ? @produtos = @produtos.by_nome(params[:nome]) : nil
     params[:department_id] ? @produtos = @produtos.by_department(params[:department_id]) : nil
   end
@@ -20,6 +18,8 @@ class ProdutosController < ApplicationController
     set_produto
     set_departments
     render :show
+    time = Benchmark.ms{ Restaurant.all }
+    puts time
   end
 
   def update
