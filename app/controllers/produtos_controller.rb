@@ -23,14 +23,13 @@ class ProdutosController < ApplicationController
 
   def update
     set_produto
-    valores = require_permit_params
-    @produto.update valores
+    @produto.update(merge_produto_params)
     if @produto.save
       flash[:notice] = 'Produto editado com sucesso!'
       redirect_to root_url
     else
-      @mensagem = ''
-      render_new
+      flash[:notice] = 'Erro ao editar produto!'
+      format.html {render_edit}
     end
   end
 
@@ -40,20 +39,20 @@ class ProdutosController < ApplicationController
   end
 
   def create
-    valores = require_permit_params
-    @produto = Produto.new valores
-    if @produto.save
-      flash[:notice] = 'Produto salvo com sucesso!'
-      redirect_to root_url
-    else
-      @mensagem = ''
-      render_new
+    @produto = Produto.new(merge_produto_params)
+
+    respond_to do |format|
+      if @produto.save
+        format.html {redirect_to root_url, notice: 'Produto criado com sucesso'}
+      else
+        flash[:notice] = 'Erro ao criar produto!'
+        format.html {render_new}
+      end
     end
   end
 
   def destroy
-    set_produto
-    @produto.destroy
+    set_produto.destroy
     flash[:notice] = 'Produto removido com sucesso!'
     redirect_to root_url
   end
@@ -62,6 +61,10 @@ class ProdutosController < ApplicationController
 
   def require_permit_params
     params.require(:produto).permit :nome, :descricao, :quantidade, :preco, :department_id, :produto_imagem
+  end
+
+  def merge_produto_params
+    require_permit_params.merge({created_by_id: current_user.id, user_email: current_user.email})
   end
 
   def set_departments

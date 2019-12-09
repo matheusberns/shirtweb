@@ -7,7 +7,7 @@ function hideAlert() {
     var alert = document.querySelector("#alert");
     var notice = document.querySelector("#notice");
     setTimeout(function () {
-        alert ? alert.remove() : notice.remove();
+        alert ? alert.add() : notice.remove();
     }, 3000);
 
 }

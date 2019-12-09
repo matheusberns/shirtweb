@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_02_142446) do
+ActiveRecord::Schema.define(version: 2019_11_29_124011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,9 @@ ActiveRecord::Schema.define(version: 2019_10_02_142446) do
     t.datetime "deleted_at"
     t.string "url_image"
     t.integer "department_id"
+    t.bigint "created_by_id"
+    t.string "user_email"
+    t.index ["created_by_id"], name: "index_produtos_on_created_by_id"
     t.index ["deleted_at"], name: "index_produtos_on_deleted_at"
   end
 
@@ -76,4 +79,5 @@ ActiveRecord::Schema.define(version: 2019_10_02_142446) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "produtos", "users", column: "created_by_id"
 end

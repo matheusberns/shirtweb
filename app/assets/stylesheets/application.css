@@ -192,7 +192,6 @@ body {
     font-family: salesforce-sans, "Helvetica Neue", helvetica, arial, sans-serif !important;
 }
 
-
 .navbar-default {
     background: linear-gradient(135deg, #ac8ece, #79589f);
     width: calc(100% - 15px);
@@ -250,6 +249,16 @@ body {
     margin: 5%;
     width: 170px;
     height: 50px;
+}
+
+.alert {
+    padding: 0px !important;
+    position: absolute !important;;
+    width: 100% !important;;
+    text-align: center !important;;
+    font-size: 16px !important;;
+    font-family: Arial !important;;
+    margin-left: -33px !important;;
 }
 
 .alinhar-bot {
@@ -316,12 +325,15 @@ body {
 .black {
     color: black;
 }
+
 a:hover {
     color: #fff !important;
 }
-a{
+
+a {
     color: #fff !important;
 }
+
 a:visited {
     color: #fff !important;
     text-decoration: none !important;
