@@ -1,5 +1,7 @@
 {
   "name": "shirtweb",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
